@@ -3,14 +3,16 @@
 
 <html>
     <head lang="en">
+        {% block head_block %} {% endblock %}
         <meta charset="UTF-8" />
         <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+        <link rel=stylesheet type="text/css" href="{% static 'css/main.css' %}">
         <title>
             Connectercise | {% block title_block %} {% endblock %}
         </title>
     </head>
     <body>
-        <div>
+        <div class="content">
             {% block body_block %}
             {% endblock %}
         </div>
